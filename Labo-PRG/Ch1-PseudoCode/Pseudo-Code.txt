@@ -1,0 +1,29 @@
+La suite de Wallis est défini selon : Pi/2 2/1 * 2/3 * 4/3 * 4/5 * 6/5
+
+1) OUTPUT Afficher un message de bienvenue à l'utilisateur
+2) Saisie du terme de Wallis
+    2.1) INPUT Affiche une saisie utilisateur
+        2.1.1) INPUT Afficher une saisie pour le numérateur
+        2.1.2) INPUT Saisie du numérateur
+
+        2.2.1) INPUT Afficher une saisie pour le dénominateur
+        2.2.2) INPUT Saisie du dénominateur
+
+3) Contrôle des termes saisies (numérateur et dénominateur)
+    3.1) Saisie correcte IF
+        3.1.1) Numérateur est pair et positif
+        3.1.2) Dénominateur est impair et positif
+        3.1.3) Calcul numérateur - dénominateur = |1|
+
+4) Si les termes sont CORRECTES
+    4.1) Calculer approximation de Wallis
+        4.1.1) IF numérateur < dénominateur
+            a) numérateur +2
+        4.1.2) IF dénominateur < numérateur
+            b) dénominateur +2
+    4.2) OUTPUT Résultat
+
+5) Si les termes sont INCORRECTES
+    5.1) OUTPUT message d'erreur
+
+6) OUTPUT fin
