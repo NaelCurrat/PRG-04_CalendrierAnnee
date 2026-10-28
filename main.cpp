@@ -9,7 +9,14 @@ const int anneeMin = 1800;
 const int anneeMax = 2100;
 
 int main() {
-    int anneeUtilisateur = questionAnnee();
-    std::string recommencerUtilisateur = questionRecommencer();
+    std::string recommencerUtilisateur;
+    do {
+        int anneeUtilisateur = questionAnnee();
+
+
+
+        recommencerUtilisateur = questionRecommencer();
+
+    }while (recommencer(recommencerUtilisateur));
 
 }

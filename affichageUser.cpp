@@ -18,24 +18,33 @@ bool anneeValide(int anneeUser) {
 };
 
 int questionAnnee() {
+    int anneeUtilisateur;
     do {
         std::cout<<"Entrer une valeur ["<< anneeMin << " - "<< anneeMax << "]" <<std::endl;
         std::cin>>anneeUtilisateur;
-    }while (anneeValide(anneeUtilisateur));
+    }while (!anneeValide(anneeUtilisateur));
+    return anneeUtilisateur;
 };
 
 std::string questionRecommencer() {
-    do {
-        std::cout<<"Ce programme affiche pour une annee de ["<< anneeMin << " - "<< anneeMax << "]" <<std::endl;
-        questionAnnee();
-    }while (recommencer(recommencerUtilisateur));
+    std::string recommencerUtilisateur;
+    std::cout << "Voulez-vous recommencer [O|N] : ";
+    std::cin >> recommencerUtilisateur;
+    while (recommencerUtilisateur != "O"
+           && recommencerUtilisateur != "o"
+           && recommencerUtilisateur != "N"
+           && recommencerUtilisateur != "n") {
+        std::cout << "Voulez-vous recommencer [O|N] : ";
+        std::cin >> recommencerUtilisateur;
+           }
+    return recommencerUtilisateur;
 }
 
 bool recommencer (std::string recommencerUser) {
-    if (recommencerUser == "N" || recommencerUser == "n") {
-        return false;
-    }else {
+    if (recommencerUser == "O" || recommencerUser == "o") {
         return true;
+    }else {
+        return false;
     }
 };
 
