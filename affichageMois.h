@@ -9,9 +9,7 @@
 #define PRG_04_CALENDRIER_AFFICHAGEMOIS_H
 #include <string>
 
-bool estBissextile(int annee);
-
-std::string afficheMois(int annee, bool estBissextile);
+std::string afficheMois(int annee, string jourDebut);
 
 
 
