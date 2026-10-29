@@ -7,9 +7,8 @@
 
 #ifndef PRG_04_CALENDRIER_AFFICHAGEMOIS_H
 #define PRG_04_CALENDRIER_AFFICHAGEMOIS_H
-#include <string>
 
-std::string afficheMois(int nbJoursMois, int joursSemaineDebut);
+int afficheMois(int nbJoursMois, int jourSemaine);
 
 
 
