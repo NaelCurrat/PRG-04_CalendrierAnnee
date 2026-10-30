@@ -4,17 +4,13 @@
 #include <iostream>
 #include <string>
 #include "affichageUser.h"
-
-const int anneeMin = 1800;
-const int anneeMax = 2100;
+#include "affichageCalendrier.h"
 
 int main() {
     std::string recommencerUtilisateur;
     do {
         int anneeUtilisateur = questionAnnee();
-
-
-
+        std::cout << afficheCalendrier(anneeUtilisateur, estBissextile(anneeUtilisateur)) << std::endl;
         recommencerUtilisateur = questionRecommencer();
 
     }while (recommencer(recommencerUtilisateur));
