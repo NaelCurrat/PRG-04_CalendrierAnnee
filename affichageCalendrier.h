@@ -9,7 +9,7 @@
 
 
 bool estBissextile(int annee);
-std::string afficheCalendrier(int annee, bool estBissextile);
+void afficheCalendrier(int annee, bool estBissextile);
 
 
 #endif //PRG_04_CALENDRIER_AFFICHAGECALENDRIER_H

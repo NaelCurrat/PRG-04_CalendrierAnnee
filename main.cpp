@@ -10,9 +10,8 @@ int main() {
     std::string recommencerUtilisateur;
     do {
         int anneeUtilisateur = questionAnnee();
-        std::cout << afficheCalendrier(anneeUtilisateur, estBissextile(anneeUtilisateur)) << std::endl;
+        afficheCalendrier(anneeUtilisateur, estBissextile(anneeUtilisateur));
         recommencerUtilisateur = questionRecommencer();
-
     }while (recommencer(recommencerUtilisateur));
 
 }

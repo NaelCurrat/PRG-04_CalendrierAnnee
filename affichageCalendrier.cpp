@@ -12,21 +12,20 @@
  int jourDebutMois = 1;
 
 bool estBissextile(int annee) {
-    if (((annee % 400) || (annee % 4)) && (annee % 100)) {
+    if ((annee % 4 == 0 && annee %100 != 0) || (annee % 400 == 0)) {
         return true;
     }else {
         return false;
     }
 }
 
-std::string afficheCalendrier(int annee, bool estBissextile) {
+void afficheCalendrier(int annee, bool estBissextile) {
     int nbJoursMois = 0;
     for (int moi = 0; moi < 12; moi++) {
         switch (moi) {
             case 0: nbJoursMois = 31;
                 break;
-            case 1: nbJoursMois = 28;
-                if (estBissextile){nbJoursMois = 29;}
+            case 1: if (estBissextile){nbJoursMois = 29;}else{nbJoursMois = 28;}
                 break;
             case 2: nbJoursMois = 31;
                 break;

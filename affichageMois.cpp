@@ -25,5 +25,5 @@ int afficheMois(int nbJoursMois, int jourSemaine) {
 
     }
     std::cout << std::endl << std::endl;
-    return (jourSemaine + nbJoursMois - 1) % 7 + 1;
+    return (jourSemaine + nbJoursMois - 1) % 7 + 1;  
 }
