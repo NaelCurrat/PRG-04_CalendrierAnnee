@@ -9,7 +9,7 @@
 #include <array>
 
  std::array<std::string, 12> mois = {"Janvier", "Fevrier", "Mars", "Avril", "Mai","Juin","Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
- int jourDebutMois = 1;
+
 
 bool estBissextile(int annee) {
     if ((annee % 4 == 0 && annee %100 != 0) || (annee % 400 == 0)) {
@@ -20,6 +20,7 @@ bool estBissextile(int annee) {
 }
 
 void afficheCalendrier(int annee, bool estBissextile) {
+    int jourDebutMois = 1;
     int nbJoursMois = 0;
     for (int moi = 0; moi < 12; moi++) {
         switch (moi) {
